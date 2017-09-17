@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ItemPedidoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>itemPedido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Producto</ion-label>
+      <ion-input type="text" [(ngModel)]="itemPedido.producto.descripcion"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Precio</ion-label>
+      <ion-input type="number" [(ngModel)]="itemPedido.producto.precio"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Cantidad</ion-label>
+      <ion-input type="number" [(ngModel)]="itemPedido.cantidad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Observacion</ion-label>
+      <ion-input type="text" [(ngModel)]="itemPedido.observacion"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <button ion-button block (click)="addItemPedido()">Guardar Item</button>
+      <button *ngIf="id != null" ion-button block (click)="deleteItemPedido()" 
+              color="danger">Eliminar Item</button>        
+    </div>
+  </ion-list>
+</ion-content>

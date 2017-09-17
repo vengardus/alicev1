@@ -17,8 +17,9 @@
   <ion-list>
     <button ion-item *ngFor="let producto of productos | async" 
             (click)="goToInfoProducto(producto.id)">
-      {{producto.descripcion }}
-    </button>  
+      <h2>{{ producto.descripcion | uppercase }}</h2>
+      <p>{{ producto.precio }}</p>
+    </button> 
   </ion-list>
 
   <div padding>

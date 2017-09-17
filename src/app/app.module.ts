@@ -9,9 +9,14 @@ import { HomePage } from '../pages/home/home';
 
 import { ProductosService } from '../services/productos.service';
 import { UsersService } from '../services/users.services';
+import { PedidosService } from '../services/pedidos.service';
 
 import { ProductoPage } from '../pages/producto/producto';
 import { UsuarioViewPage } from '../pages/usuario-view/usuario-view';
+import { InfoProductoPage } from '../pages/info-producto/info-producto';
+import { PedidosViewPage } from '../pages/pedidos/pedidos-view/pedidos-view';
+import { DetallesPedidoViewPage } from '../pages/pedidos/detalles-pedido-view/detalles-pedido-view';
+import { ItemPedidoPage } from '../pages/pedidos/item-pedido/item-pedido';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -36,7 +41,11 @@ export const environment = {
     MyApp,
     HomePage,
     ProductoPage,
-    UsuarioViewPage
+    UsuarioViewPage,
+    InfoProductoPage,
+    PedidosViewPage,
+    DetallesPedidoViewPage,
+    ItemPedidoPage
   ],
   imports: [
     BrowserModule,
@@ -51,14 +60,19 @@ export const environment = {
     MyApp,
     HomePage,
     ProductoPage,
-    UsuarioViewPage
+    UsuarioViewPage,
+    InfoProductoPage,
+    PedidosViewPage,
+    DetallesPedidoViewPage,
+    ItemPedidoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductosService,
-    UsersService
+    UsersService,
+    PedidosService
   ]
 })
 export class AppModule {}

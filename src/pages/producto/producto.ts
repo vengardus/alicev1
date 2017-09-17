@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductosService } from '../../services/productos.service';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-
+import { InfoProductoPage } from '../info-producto/info-producto';
 /**
  * Generated class for the ProductoPage page.
  *
@@ -37,6 +37,6 @@ export class ProductoPage {
   }
 
   public createProducto(id) {
-    //this.navCtrl.push(InfoProductoPage, {id:null});
+    this.navCtrl.push(InfoProductoPage, {id:null});
   }
 }

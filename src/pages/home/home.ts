@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { ProductoPage } from '../producto/producto';
 import { UsuarioViewPage } from '../usuario-view/usuario-view';
+import { PedidosViewPage } from '../pedidos/pedidos-view/pedidos-view';
 
 @Component({
   selector: 'page-home',
@@ -9,10 +10,10 @@ import { UsuarioViewPage } from '../usuario-view/usuario-view';
 })
 export class HomePage {
   notes = [];
+  rootPage: any = HomePage;
   @ViewChild('myNav') nav: NavController
 
   constructor(public navCtrl: NavController) {
-    
   }
 
   public viewProductos() {
@@ -21,5 +22,9 @@ export class HomePage {
 
   public viewUsuarios() {
     this.navCtrl.push(UsuarioViewPage, {id:null});
+  }
+
+  public viewPedidos() {
+    this.navCtrl.push(PedidosViewPage, {id:null});
   }
 }
